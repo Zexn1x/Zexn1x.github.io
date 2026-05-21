@@ -1,0 +1,115 @@
+* {
+    font-family: 'Lato', sans-serif;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        width: auto;
+        height: 200vh;
+        background-color: white;
+        padding: 100px 125px;
+
+        .menu-button {
+            padding: 12px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: fixed;
+            top: 32px;
+            right: 32px;
+            z-index: 5;
+
+            .menu-button-div {
+                width: 26px;
+                height: 2px;
+                background-color: black;
+                z-index: 4;
+            }
+        }
+
+        .title {
+            color: black;
+            font-size: 55pt;
+            font-weight: 300;
+            transform-style: preserve-3d;
+        }
+
+        .sidebar {
+            width: 0vw;
+            height: 100vh;
+            background-color: white;
+            right: 0;
+            top: 0;
+            position: absolute;
+            display: none;
+            transition: all ease 1s;
+            z-index: 3;
+
+            .pages {
+                position: absolute;
+                padding: 75px;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .link {
+                    padding: 10px;
+                    width: 180px;
+                    transition: 1s ease;
+                    color: rgb(57, 138, 63);
+                    text-decoration: none;
+
+                    p {
+                        font-size: 32pt;
+                    }
+                }
+
+                .link::before {
+                    background-color: rgba(0, 128, 0, .7);
+                    position: absolute;
+                    bottom: 0px;
+                    width: 100%;
+                    height: 8px;
+                    z-index: 1;
+                    transition: ease .5s;
+                }
+
+                .link:hover::before {
+                    height: 100%;
+                }
+            }
+        }
+
+        .background {
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            transition: all ease 1s;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .resume-img {
+            width: 70%;
+            position: relative;
+            left: 15%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+
+        background-color: black;
+    }
+}
