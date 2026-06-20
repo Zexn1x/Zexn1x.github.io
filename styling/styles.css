@@ -31,9 +31,9 @@ html::-webkit-scrollbar {
             padding: 5px 6px;
             border-radius: 6px;
             z-index: 2;
-            background-color: rgba(26, 26, 26, 0.5);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px); /* For Safari support */
+            background-color: rgba(26, 26, 26, 0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px); /* For Safari support */
             gap: 3px;
 
             a {
