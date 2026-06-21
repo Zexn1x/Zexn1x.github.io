@@ -1,0 +1,58 @@
+@media (min-width: 768px) {
+    body {
+        .hobby-board {
+            position: absolute;
+            top: 10vh;
+            left: 10vw;
+            width: auto;
+            height: auto;
+            /* background-color: aquamarine; */
+            display: grid;
+            grid-template-columns: 19.625vw 19.625vw 19.625vw 19.625vw;
+            grid-template-rows: 40vh 40vh;
+            gap: 0.5vw;
+            
+            .grid-item {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: ease 0.4s all;
+                }
+            
+                h3 {
+                    position: absolute;
+                    transition: ease 0.4s all;
+                    font-size: 2.5vw;
+                    font-weight: 400;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    color: white;
+                    z-index: 2;
+                }
+            }
+            
+            .grid-item:hover {
+                img {
+                    filter: brightness(55%);
+                }
+                
+                h3 {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+
+        background-color: black;
+    }
+}
