@@ -3,8 +3,9 @@
         opacity: 0;
         visibility: hidden;
     }
-    
-    5%, 95% {
+
+    5%,
+    95% {
         opacity: 1;
         visibility: visible;
     }
@@ -30,6 +31,10 @@
         model-viewer::-webkit-scrollbar {
             /*Chrome, Safari, Edge*/
             display: none;
+        }
+
+        model-viewer::part(progress-bar) {
+            display: none !important;
         }
 
         h3 {
