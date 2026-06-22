@@ -9,7 +9,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 </head>
 
-<body id="body">
+<body id="body" style="height: 500vh;">
 
     <div class="menu">
         <a href="/index.html">Home</a>
@@ -18,18 +18,19 @@
         <a href="/resume.html">Resume</a>
     </div>
 
-    <model-viewer
-        src="CAD-test2.glb"
-        alt="3D CAD model"
-        camera-controls
-        auto-rotate
-        auto-rotate-delay="0"
-        rotation-per-second="0.35rad"
-        interaction-prompt="none"
-        disable-pan
-        shadow-intensity="1">
+    <h3 class="scroll-object">This is a really cool test part I made in SolidWorks that is completely useless, but it
+        spins when you scroll with is super cool, right?</h3>
+
+
+    <model-viewer src="CAD-test2.glb" alt="3D CAD model"
+        camera-orbit="calc(45deg + env(window-scroll-y) * 90deg) calc(75deg - env(window-scroll-y) * 45deg) 1.5m"
+        interaction-prompt="none" disable-pan shadow-intensity="0">
     </model-viewer>
 
+
+    <!-- auto-rotate
+        auto-rotate-delay="0"
+        rotation-per-second="0.35rad" -->
 
     <script src="script.js"></script>
 </body>

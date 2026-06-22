@@ -32,7 +32,8 @@ html::-webkit-scrollbar {
             z-index: 2;
             background-color: rgba(26, 26, 26, 0.3);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px); /* For Safari support */
+            -webkit-backdrop-filter: blur(12px);
+            /* For Safari support */
             gap: 3px;
 
             a {
@@ -51,18 +52,28 @@ html::-webkit-scrollbar {
             a:hover {
                 background-color: rgba(26, 26, 26, 0.7);
             }
+        }
 
-            /* .active {
+        /* Base styles for the object */
+        .scroll-object {
+            /* Hidden by default */
+            opacity: 0;
+            visibility: hidden;
 
-            } */
+            /* Smooth fade-in and fade-out transition */
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        /* Class added by JavaScript when within the scroll range */
+        .scroll-object.active {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }
 
 @media (max-width: 768px) {
-
     body {
-
         background-color: black;
     }
 }

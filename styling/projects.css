@@ -1,15 +1,47 @@
-@media (min-width: 768px) {
-    
-    body {
-
-        model-viewer {
-                width: 70vw;
-                height: 60vh;
-                margin: 20vh 15vw;
-                padding: 0;
-                background-color: #f0f0f0;
-                border-radius: 8px;
-            }
+@keyframes show-and-hide {
+    0% {
+        opacity: 0;
+        visibility: hidden;
     }
     
+    5%, 95% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        model-viewer {
+            width: 30vw;
+            height: 60vh;
+            top: 20vh;
+            right: 10vw;
+            background-color: #ffffff;
+            border-radius: 8px;
+            position: fixed;
+        }
+
+        model-viewer::-webkit-scrollbar {
+            /*Chrome, Safari, Edge*/
+            display: none;
+        }
+
+        h3 {
+            position: fixed;
+            left: 25vw;
+            top: 50vh;
+            width: 35vw;
+            font-size: 2.5vw;
+            font-weight: 300;
+            line-height: 1.25;
+            color: black;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
