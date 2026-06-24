@@ -19,22 +19,16 @@
     </div>
 
     <h3 class="scroll-object first-object">This is a really cool test part I made in SolidWorks that is completely
-        useless, but it
-        spins when you scroll which is super cool, right?</h3>
+        useless, but it spins when you scroll which is super cool, right?</h3>
 
     <h3 class="scroll-object second-object">This is a really cool test part I made in SolidWorks that is completely
         useless, but it spins when you scroll which is super cool, right?</h3>
 
 
-    <model-viewer src="CAD-test2.glb" alt="3D CAD model"
-        camera-orbit="calc(45deg + env(window-scroll-y) * 90deg) calc(75deg - env(window-scroll-y) * 45deg) 1.5m"
+    <model-viewer src="Swerve-Assembly.glb" alt="3D CAD model"
+        camera-orbit="calc(0deg - env(window-scroll-y) * 45deg) calc(80deg + env(window-scroll-y) * 90deg) calc(2m - env(window-scroll-y) * 1m)"
         interaction-prompt="none" disable-pan shadow-intensity="0">
     </model-viewer>
-
-
-    <!-- auto-rotate
-        auto-rotate-delay="0"
-        rotation-per-second="0.35rad" -->
 
     <script src="script.js"></script>
 </body>
