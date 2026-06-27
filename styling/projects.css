@@ -56,9 +56,8 @@
             flex-direction: row;
             gap: 10vw;
             width: 80vw;
-            left: 10vw;
             align-items: center;
-            margin-top: 10vh;
+            margin: 10vh 10vw;
 
             img {
                 width: 35vw;
